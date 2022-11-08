@@ -10,23 +10,23 @@ struct Node
 void PreOrder(struct Node *p){
     if(p){
         printf("%d",p->data);
-        Preorder(p->lchild);
-        Preorder(p->rchild);
+        PreOrder(p->lchild);
+        PreOrder(p->rchild);
     }
 }
 
 void InOrder(struct Node *p){
     if(p){
-        Inorder(p->lchild);
+        InOrder(p->lchild);
         printf("%d ",p->data);
-        Inorder(p->rchild);
+        InOrder(p->rchild);
     }
 }
 
 void PostOrder(struct Node *p){
     if(p){
-        Postorder(p->lchild);
-        Postorder(p->rchild);
+        PostOrder(p->lchild);
+        PostOrder(p->rchild);
         printf("%d ",p->data);
     }
 }
