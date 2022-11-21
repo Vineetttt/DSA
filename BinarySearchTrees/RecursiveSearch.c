@@ -13,9 +13,9 @@ struct Node *RecursiveSearch(struct Node *ptr, int key){
         return NULL;
     }
     else if(key < ptr->data)/*search in left subtree*/
-        return search(ptr->lchild, key);
+        return RecursiveSearch(ptr->lchild, key);
     else if(key > ptr->data)/*search in right subtree*/
-        return search(ptr->rchild, key);
+        return RecursiveSearch(ptr->rchild, key);
     else /*skey found*/
         return ptr;
 }
